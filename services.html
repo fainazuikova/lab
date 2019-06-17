@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Работа с Bootstrap</title>
+    <!--Fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Bootstrap Reboot CSS -->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+
+<body>
+
+    <!--Preloader-->
+    <!--<div id="page-preloader">
+        <div class="cssload-box-loading">
+        </div>
+    </div>-->
+    <!--Preloader-->
+
+    <header class="header header__about" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul class="menu d-flex">
+                            <li class="menu__item">
+                                <a href="about.html">О компании</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#links">Пресс-центр</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="services.html">Услуги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#links">Отрасли</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-2">
+                    <a href="#" class="nav__btn btn">
+                        <i class="fa fa-phone"></i>
+                        Заказать звонок
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about-us services__about">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-3">
+                    <h1 class="about-us__title">
+                        Услуги
+                    </h1>
+                </div>
+                <div class="col-6 offset-3">
+                    <nav class="menu-us">
+                        <ul class="menu d-flex">
+                            <li class="about-us__nav">
+                                <div class="about__menu">
+                                    <a href="#">
+                                        <span class="font">
+                                            Legal
+                                        </span><br>
+                                        Юридическое сопровождение
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="about-us__nav">
+                                <div class="about__menu">
+                                    <a href="#">
+                                        <span class="font"> Accounting
+                                        </span> <br>
+                                        Финансовый аутсорсинг
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="about-us__nav">
+                                <div class="about__menu">
+                                    <a href="#">
+                                        <span class="font"> Business Consulting
+                                        </span> <br>
+                                        Бизнес консалтинг
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-us__wrap services d-flex">
+                    <a href="index.html" class="about-us__link">
+                        Главная
+                    </a>
+                    <div class="about-us__arrow">
+                        &#8594;
+                    </div>
+                    <a href="#" class="about-us__link">
+                        Услуги
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+      <section class="escort">
+        <div class="row">
+            <div class="col-4 offset-3">
+                <div class="escort__wrap">
+                    <div class="escort__par">
+                        <h3 class="escort__title">
+                            Юридическое
+                            сопровождение
+                        </h3>
+                        <p class="escort__text">
+                            ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h3 class="accordion__title">
+                    Навигация
+                </h3>
+                <div id="accordion" class="accordion">
+                    <h4>
+                        Подпункт номер один
+                    </h4>
+                    <div>
+                        <p class="acc">
+                            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                            ut neque. Vivamus nisi metus, molestie vel, gravida in
+                        </p>
+                    </div>
+                    <h4>
+                        Второй подпункт
+                    </h4>
+                    <div>
+                        <p>
+                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                        </p>
+                    </div>
+                    <h4>
+                        Третья подкатегория c
+                        длинным названием
+                    </h4>
+                    <div>
+                        <p>
+                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                        </p>
+                    </div>
+                    <h4>
+                        Категория номер четыре
+                    </h4>
+                    <div>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tabs">
+        <div class="row">
+            <div class="col-12">
+                <div id="tabs" class="tabs d-flex">
+                    <ul>
+                        <li><a href="#tabs-1">→ Подкатегория услуг первая</a></li>
+                        <li><a href="#tabs-2">→ Вторая подкатегория</a></li>
+                        <li><a href="#tabs-3">→ Маленькая услуга</a></li>
+                        <li><a href="#tabs-4">→ Довольно длинная и замысловатая</a></li>
+                        <li><a href="#tabs-5">→ Ещё одна</a></li>
+                        <li><a href="#tabs-6">→ И ещё одна в конце</a></li>
+                    </ul>
+                    <div class="tab">
+
+                        <div id="tabs-1">
+                            <h2>Подкатегория услуг первая</h2>
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                        </div>
+                        <div id="tabs-2">
+                            <h2>Вторая подкатегория</h2>
+                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                        </div>
+                        <div id="tabs-3">
+                            <h2>Маленькая услуга</h2>
+                            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                        </div>
+                        <div id="tabs-4">
+                            <h2>Довольно длинная и замысловатая</h2>
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                        </div>
+                        <div id="tabs-5">
+                            <h2>Ещё одна</h2>
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                        </div>
+                        <div id="tabs-6">
+                            <h2>И ещё одна в конце</h2>
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h4 class="about__title">
+                        О компании
+                    </h4>
+                    <a href="#" class="about__link">
+                        Видение, миссия и ценности
+                    </a>
+                    <a href="#" class="about__link">
+                        Преимущества
+                    </a>
+                    <a href="#" class="about__link">
+                        Клиенты
+                    </a>
+                    <a href="#" class="about__link">
+                        Партнеры
+                    </a>
+                    <a href="#" class="about__link">
+                        Контакты
+                    </a>
+                </div>
+                <div class="col-4">
+                    <h4 class="about__title">
+                        Пресс – центр
+                    </h4>
+                    <a href="#" class="about__link">
+                        Новости
+                    </a>
+                    <a href="#" class="about__link">
+                        Публикации
+                    </a>
+                    <a href="#" class="about__link">
+                        Мероприятия
+                    </a>
+                    <a href="#" class="about__link">
+                        Консультация эксперта
+                    </a>
+                </div>
+                <div class="col-4">
+                    <h4 class="about__title">
+                        Услуги
+                    </h4>
+                    <a href="#" class="about__link">
+                        Legal (Юридическое сопровождение)
+                    </a>
+                    <a href="#" class="about__link">
+                        Accounting ( Финансовый аутсорсинг)
+                    </a>
+                    <a href="#" class="about__link">
+                        Business Consulting (Бизнес консалтинг)
+                    </a>
+                </div>
+                <div class="col-4">
+                    <h4 class="about__title">
+                        Отрасли
+                    </h4>
+                    <a href="#" class="about__link">
+                        Аграрный сектор
+                    </a>
+                    <a href="#" class="about__link">
+                        Внешнеэкономическая деятельность
+                    </a>
+                    <a href="#" class="about__link">
+                        ИT – бизнес
+                    </a>
+                    <a href="#" class="about__link">
+                        Оптовая и розничная торговля
+                    </a>
+                    <a href="#" class="about__link">
+                        Сфера услуг
+                    </a>
+                    <a href="#" class="about__link">
+                        Транспорт и Логистика
+                    </a>
+                </div>
+                <div class="col-4">
+                    <h4 class="about__title">
+                        Образовательный центр
+                    </h4>
+                    <a href="#" class="about__link">
+                        Про Образовательный Центр
+                    </a>
+                    <a href="#" class="about__link">
+                        Бизнес-тренинги, семинары, круглые столы
+                    </a>
+                    <a href="#" class="about__link">
+                        Преимущества
+                    </a>
+                    <a href="#" class="about__link">
+                        Alumni
+                    </a>
+                </div>
+                <div class="col-4">
+                    <h4 class="about__title">
+                        Соц. предпринимательство
+                    </h4>
+                    <a href="#" class="about__link">
+                        Социальная миссия
+                    </a>
+                    <a href="#" class="about__link">
+                        Проекты
+                    </a>
+                    <a href="#" class="about__link">
+                        Партнеры
+                    </a>
+                    <a href="#" class="about__link">
+                        Консультация эксперта
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="display: none;">
+    <div class="box-modal" id="exampleModal">
+        <div class="box-modal_close arcticmodal-close">закрыть</div>
+        Пример модального окна
+    </div>
+</div>
+    <section>
+        
+    </section>
+    
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="index.html"><img src="img/logo2.png" alt="logo" class="footer__logo"></a>
+                </div>
+                <div class="col-3">
+                    <div class="footer__contacts">
+                        <p class="footer__contact">
+                            Вы хотите сотрудничать с нами? <br>
+                            У Вас есть идеи или предложения? <br>
+                            Свяжитесь с нами прямо сейчас!
+                        </p>
+                        <p class="footer__contact">
+                            65000, <br>
+                            Украина, г. Одесса <br>
+                            Ул Базарная, 36
+                        </p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer__wrap d-flex">
+                        <p class="footer__border">
+                            W
+                        </p>
+                        <p class="footer__design">
+                            Дизайн и разработка <br>
+                            <span>КОУЧИНГ ПО ВЕРСТКЕ</span>
+                        </p>
+                    </div>
+                    <p class="footer__copy">
+                        &#169; Все права защищены
+                        LAB Consulting
+                    </p>
+                    <a class="footer__mail" href="mailto:lab-consult.com">lab-consult.com</a>
+                </div>
+                <div class="col-2 offset-1">
+                    <a href="#" class="footer__btn btn">
+                        <i class="fa fa-phone"></i>
+                        Заказать звонок
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+</body>
+
+</html>

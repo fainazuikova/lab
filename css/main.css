@@ -1,0 +1,1026 @@
+/* ------ Спецификация ------ */
+
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('/images/spinner.gif') no-repeat 50% 50%;
+    margin: -16px 0 0 -16px;
+}
+
+
+.cssload-box-loading {
+	width: 138px;
+	height: 138px;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.cssload-box-loading:before {
+	content: '';
+	width: 138px;
+	height: 14px;
+	background: rgba(0,0,0,0.97);
+	opacity: 0.1;
+	position: absolute;
+	top: 162px;
+	left: 0;
+	border-radius: 50%;
+	animation: shadow 0.445s linear infinite;
+		-o-animation: shadow 0.445s linear infinite;
+		-ms-animation: shadow 0.445s linear infinite;
+		-webkit-animation: shadow 0.445s linear infinite;
+		-moz-animation: shadow 0.445s linear infinite;
+}
+.cssload-box-loading:after {
+	content: '';
+	width: 138px;
+	height: 138px;
+	background: rgb(26,54,104);
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 8px;
+	animation: cssload-animate 0.445s linear infinite;
+		-o-animation: cssload-animate 0.445s linear infinite;
+		-ms-animation: cssload-animate 0.445s linear infinite;
+		-webkit-animation: cssload-animate 0.445s linear infinite;
+		-moz-animation: cssload-animate 0.445s linear infinite;
+}
+
+
+
+@keyframes cssload-animate {
+	17% {
+		border-bottom-right-radius: 8px;
+	}
+	25% {
+		transform: translateY(25px) rotate(22.5deg);
+	}
+	50% {
+		transform: translateY(50px) scale(1, 0.9) rotate(45deg);
+		border-bottom-right-radius: 110px;
+	}
+	75% {
+		transform: translateY(25px) rotate(67.5deg);
+	}
+	100% {
+		transform: translateY(0) rotate(90deg);
+	}
+}
+
+@-o-keyframes cssload-animate {
+	17% {
+		border-bottom-right-radius: 8px;
+	}
+	25% {
+		-o-transform: translateY(25px) rotate(22.5deg);
+	}
+	50% {
+		-o-transform: translateY(50px) scale(1, 0.9) rotate(45deg);
+		border-bottom-right-radius: 110px;
+	}
+	75% {
+		-o-transform: translateY(25px) rotate(67.5deg);
+	}
+	100% {
+		-o-transform: translateY(0) rotate(90deg);
+	}
+}
+
+@-ms-keyframes cssload-animate {
+	17% {
+		border-bottom-right-radius: 8px;
+	}
+	25% {
+		-ms-transform: translateY(25px) rotate(22.5deg);
+	}
+	50% {
+		-ms-transform: translateY(50px) scale(1, 0.9) rotate(45deg);
+		border-bottom-right-radius: 110px;
+	}
+	75% {
+		-ms-transform: translateY(25px) rotate(67.5deg);
+	}
+	100% {
+		-ms-transform: translateY(0) rotate(90deg);
+	}
+}
+
+@-webkit-keyframes cssload-animate {
+	17% {
+		border-bottom-right-radius: 8px;
+	}
+	25% {
+		-webkit-transform: translateY(25px) rotate(22.5deg);
+	}
+	50% {
+		-webkit-transform: translateY(50px) scale(1, 0.9) rotate(45deg);
+		border-bottom-right-radius: 110px;
+	}
+	75% {
+		-webkit-transform: translateY(25px) rotate(67.5deg);
+	}
+	100% {
+		-webkit-transform: translateY(0) rotate(90deg);
+	}
+}
+
+@-moz-keyframes cssload-animate {
+	17% {
+		border-bottom-right-radius: 8px;
+	}
+	25% {
+		-moz-transform: translateY(25px) rotate(22.5deg);
+	}
+	50% {
+		-moz-transform: translateY(50px) scale(1, 0.9) rotate(45deg);
+		border-bottom-right-radius: 110px;
+	}
+	75% {
+		-moz-transform: translateY(25px) rotate(67.5deg);
+	}
+	100% {
+		-moz-transform: translateY(0) rotate(90deg);
+	}
+}
+
+@keyframes shadow {
+	0%,
+	100% {
+		transform: scale(1, 1);
+	}
+	50% {
+		transform: scale(1.2, 1);
+	}
+}
+
+@-o-keyframes shadow {
+	0%,
+	100% {
+		-o-transform: scale(1, 1);
+	}
+	50% {
+		-o-transform: scale(1.2, 1);
+	}
+}
+
+@-ms-keyframes shadow {
+	0%,
+	100% {
+		-ms-transform: scale(1, 1);
+	}
+	50% {
+		-ms-transform: scale(1.2, 1);
+	}
+}
+
+@-webkit-keyframes shadow {
+	0%,
+	100% {
+		-webkit-transform: scale(1, 1);
+	}
+	50% {
+		-webkit-transform: scale(1.2, 1);
+	}
+}
+
+@-moz-keyframes shadow {
+	0%,
+	100% {
+		-moz-transform: scale(1, 1);
+	}
+	50% {
+		-moz-transform: scale(1.2, 1);
+	}
+}
+
+@font-face {
+    font-family: 'Museo Sans 300';
+    src: url('../fonts/museosanscyrl-300.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/museosanscyrl-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/museosanscyrl-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/museosanscyrl-300.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/museosanscyrl-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/museosanscyrl-300.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Museo Sans 700';
+    src: url('../fonts/museosanscyrl-700.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/museosanscyrl-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/museosanscyrl-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/museosanscyrl-700.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/museosanscyrl-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/museosanscyrl-700.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Museo Sans 100';
+    src: url('../fonts/museosanscyrl-100.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/museosanscyrl-100.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/museosanscyrl-100.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/museosanscyrl-100.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/museosanscyrl-100.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/museosanscyrl-100.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+body {
+    font-family: 'Museo Sans 300';
+    color: #404048;
+    padding: 0;
+    letter-spacing: 0em;
+    margin: 0;
+    font-size: 14px;
+}
+
+div,
+p,
+form,
+input,
+a,
+span,
+button {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+ul,
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Museo Sans 700';
+    color: #081d42;
+    line-height: 1.6em;
+}
+
+h1 {
+    font-size: 58px;
+    line-height: 1.2em;
+}
+
+h2 {
+    font-size: 29px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 21px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 13px;
+    font-weight: 400;
+    color: #e84545;
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+a,
+.btn,
+input {
+    transition: all 0.5s ease;
+}
+
+input,
+input:hover,
+input:focus,
+input:active,
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
+    outline: none;
+}
+
+.btn {
+    color: white;
+    font-size: 13px;
+    font-family: 'Museo Sans 700';
+    background: #1cb883;
+    border: 1px solid #1cb883;
+    border-radius: 0px;
+    /*box-shadow: 0 5px #149d6f;*/
+}
+
+/*.btn:hover {
+    color: #1cb883;
+    background: white;
+    box-shadow: none;
+}*/
+
+.btn:hover {
+    color: white;
+    box-shadow: 0 5px #149d6f;
+    transition: all 0.7s ease;
+}
+
+/* ------ Шапка сайта ------ */
+
+header {
+    background: url('../img/header2.jpg') no-repeat top / cover;
+    padding-top: 16px;
+    padding-bottom: 146px;
+    border-top: 6px solid #58647a;
+}
+
+.menu {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+li a {
+    color: #3f4b60;
+    font-size: 17px;
+    font-family: 'Museo Sans 700';
+    border-bottom: 2px solid transparent;
+}
+
+li a:hover {
+    color: #3f4b60;
+    border-bottom: 2px solid #3f4b60;
+}
+
+.nav__btn {
+    margin-top: 15px;
+    padding-right: 22px;
+}
+
+.fa-phone {
+    padding-right: 5px;
+    color: #46e6b0;
+}
+
+/* ------Первый экран главная ------ */
+
+.offer {
+    margin-top: 103px;
+}
+
+.offer__text {
+    font-family: 'Museo Sans 100';
+    font-size: 29px;
+    color: #081d42;
+    max-width: 500px;
+    margin-top: 15px;
+    line-height: 1.2em;
+}
+
+.offer__soc {
+    box-shadow: 0 0 5px 2px #ecf3ff;
+    max-width: 170px;
+    border-radius: 3px;
+    padding: 4px;
+    opacity: 0.7;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    display: flex;
+    margin-top: 30px;
+}
+
+.fa-facebook:hover {
+    opacity: 0.5;
+    transition: all 0.7s ease;
+}
+
+.fa-twitter:hover {
+    opacity: 0.5;
+    transition: all 0.7s ease;
+}
+
+.fa-telegram-plane:hover {
+    opacity: 0.5;
+    transition: all 0.7s ease;
+}
+
+.fa-facebook {
+    color: #3d6ca8;
+    border: 2px solid;
+    font-size: 16px;
+    padding: 6px;
+}
+
+.fa-twitter {
+    color: #43c9fd;
+    border: 2px solid;
+    font-size: 16px;
+    padding: 6px;
+}
+
+.fa-telegram-plane {
+    border: 2px solid;
+    font-size: 16px;
+    padding: 6px;
+}
+
+/* ------Второй экран главная ------ */
+
+.trust {
+    padding-top: 47px;
+    padding-bottom: 92px;
+    background: #f1f1f3;
+}
+
+.trust__back {
+    background: #c8cbdb;
+    border-radius: 50%;
+    width: 119px;
+    height: 119px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 130px;
+    margin-top: 25px;
+}
+
+.trust__img {
+    max-height: 65px;
+}
+
+.trust__headline {
+    margin-top: 16px;
+}
+
+/* ------Третий экран главная ------ */
+
+.letters {
+    padding-bottom: 68px;
+}
+
+.letters__btn {
+    margin-left: 503px;
+    font-size: 16px;
+    padding: 11px 40px;
+    margin-top: -23px;
+    margin-bottom: 82px;
+}
+
+.letters__circle {
+    border-radius: 50%;
+    background-color: rgb(16, 46, 98);
+    width: 86px;
+    height: 86px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Museo Sans 100';
+    margin-left: 146px;
+    margin-bottom: 3px;
+}
+
+.letters__headline {
+    font-size: 24px;
+    font-family: 'Museo Sans 100';
+}
+
+.letters__first {
+    color: #b81c31;
+}
+
+.letters__text {
+    max-width: 360px;
+}
+
+/* ------Четвертый экран главная ------ */
+
+.mission {
+    background: #5f6a7e;
+    padding-bottom: 15px;
+}
+
+.mission__par {
+    justify-content: space-between;
+}
+
+.mission__title {
+    color: #abb0b9;
+    font-size: 23px;
+    margin-top: 33px;
+    text-align: left;
+    border-bottom: 3px solid #6e798b;
+    padding-bottom: 7px;
+}
+
+.mission__text {
+    font-size: 15px;
+    color: #d3d6da;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.2em;
+    margin-bottom: 18px;
+}
+
+.mission__wrap {
+    width: 461px;
+    margin-top: 12px;
+}
+
+.mission__wrap_second {
+    width: 350px;
+}
+
+.mission__btn {
+    margin-top: 22px;
+    color: #d3d6da;
+    font-size: 15px;
+    background-color: #5f6a7e;
+    border: 1px solid #d3d6da;
+    padding: 10px 32px;
+}
+
+.mission__btn:hover {
+    box-shadow: 2px 2px;
+}
+
+.news__wrap {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #6e798b;
+    padding-bottom: 10px;
+}
+
+.news__title {
+    color: #abb0b9;
+    font-size: 23px;
+    margin-top: 33px;
+    text-align: left;
+    border-bottom: 3px solid #6e798b;
+    padding-bottom: 7px;
+    margin-bottom: 22px;
+}
+
+.news__cover {
+    margin-left: 18px;
+}
+
+.news__text {
+    font-family: 'Museo Sans 700';
+    font-size: 12px;
+    color: #d3d6da;
+    width: 165px;
+    text-align: left;
+}
+
+.news__number {
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+    color: #d3d6da;
+    text-align: left;
+    margin-top: 4px;
+}
+
+/* ------Пятый экран главная ------ */
+
+.about {
+    background: #3a4456;
+    padding-bottom: 48px;
+}
+
+.about__title {
+    font-family: 'Museo Sans 700';
+    font-size: 19px;
+    color: #d3d6da;
+    margin-top: 39px;
+}
+
+.about__link {
+    display: block;
+    font-family: 'Museo Sans 300';
+    font-size: 14px;
+    color: #d3d6da;
+}
+
+.about__link:hover {
+    color: #7b7e83;
+}
+
+/* ------ Футер ------ */
+
+.footer {
+    padding-bottom: 26px;
+    background: #1f2531;
+    color: #d3d6da;
+    border-bottom: 20px solid #58647a;
+}
+
+.footer__contacts {
+    margin-top: 34px;
+}
+
+.footer__contact {
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.2em;
+    margin-bottom: 17px;
+}
+
+.footer__wrap {
+    margin-top: 38px;
+}
+
+.footer__border {
+    border: 1px solid;
+    font-family: 'Museo Sans 100';
+    font-size: 14.5px;
+    width: 28px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__design {
+    margin-left: 22px;
+    text-align: left;
+    font-family: 'Museo Sans 100';
+    font-size: 10px;
+}
+
+.footer__design span {
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+}
+
+.footer__copy {
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+    width: 152px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.footer__mail {
+    font-family: 'Museo Sans 100';
+    font-size: 12px;
+    border-bottom: 2px solid;
+    color: #d3d6da;
+}
+
+.footer__mail:hover {
+    color: #5d5e61;
+}
+
+.footer__btn {
+    margin-top: 67px;
+    margin-left: 17px;
+    padding: 7px 13px;
+}
+
+/* ------ Шапка сайта основной фон ------ */
+
+.header__about {
+    background: url('../img/header1.png') no-repeat top / cover;
+    padding-bottom: 7px;
+}
+
+/* ------ Первый экран "О компании" ------ */
+
+.about-us {
+    background: #fafafb;
+    padding-top: 66px;
+
+}
+
+.about-us__title {
+    font-family: 'Museo Sans 700';
+    font-size: 37px;
+}
+
+.about-us__link {
+    font-family: 'Museo Sans 300';
+    font-size: 15px;
+    color: #7e838d;
+    border-bottom: 1px transparent solid;
+    margin-right: 10px;
+}
+
+.about-us__link:hover {
+    color: #2e3544;
+    border-bottom: 1px solid;
+}
+
+
+.about-us__arrow {
+    margin-right: 10px;
+}
+
+.menu-us {
+    margin-top: 29px;
+    justify-content: flex-end;
+}
+
+.about-us__nav a {
+    padding: 10px;
+    border: 2px transparent solid;
+}
+
+.about-us__nav a:hover {
+    color: brown;
+    border: 2px solid;
+}
+
+.adventage {
+    padding-top: 112px;
+}
+
+.advantage__title {
+    text-align: left;
+    margin-bottom: 23px;
+}
+
+.advantage__text {
+    font-family: 'Museo Sans 300';
+    font-size: 15px;
+    color: #404048;
+    text-align: left;
+    line-height: 1.2em;
+}
+
+.advantage__text:after {
+    content: '';
+    display: block;
+    background: #e5e6e8;
+    width: 960px;
+    height: 2px;
+    margin-top: 30px;
+    margin-left: -92px;
+}
+
+
+.advantage__first {
+    font-family: 'Museo Sans 300';
+    font-size: 15px;
+    color: #404048;
+    text-align: left;
+    line-height: 1.2em;
+}
+
+.advantage__text_first:after {
+    content: '';
+    display: block;
+    background: #e5e6e8;
+    width: 1180px;
+    height: 2px;
+    margin-top: 50px;
+}
+
+.fa-balance-scale {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    font-size: 26px;
+    color: #102e62;
+    border: solid 2px;
+    border-radius: 27px;
+    padding: 16px;
+}
+
+.advantage__headline {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.photo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.photo__title {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.truck {
+    border: solid 6px transparent;
+}
+
+.truck:hover {
+    border: solid 6px #9a97a7;
+    transition: 0.7s;
+    opacity: 0.5
+}
+
+.map {
+    margin-top: 70px;
+}
+
+.about__menu {
+    border: 2px solid transparent;
+    padding: 5px;
+}
+
+.about__menu:hover {
+    border: 2px solid;
+    color: brown;
+    padding: 5px;
+}
+
+.about__menu a {
+    font-size: 12px;
+    padding: 0;
+    font-family: 'Museo Sans 300';
+}
+
+.about__menu a:hover {
+    border: none;
+}
+
+.font {
+    font-family: 'Museo Sans 700';
+    font-size: 15px;
+
+}
+
+.services {
+    margin-top: -28px;
+}
+
+.services__about {
+    padding-bottom: 70px;
+}
+
+.escort {
+    background: url('../img/Local-Business-Insurance-Agents.png') no-repeat;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.escort__text {
+    max-width: 335px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.escort__title {
+    font-family: 'Museo Sans 700';
+    font-size: 25px;
+    color: white;
+    text-align: left;
+}
+
+.escort__par {
+    font-family: 'Museo Sans 300';
+    font-size: 15px;
+    color: white;
+    text-align: left;
+}
+
+.accordion {
+    max-width: 300px;
+}
+
+.accordion__title {
+    color: white;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.accordion p {
+    color: #e4e2e2;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.accordion h4 {
+    color: white;
+}
+
+.accordion h4:after {
+    content: '';
+    display: block;
+    background: #e5e6e8;
+    width: 300px;
+    height: 2px;
+   }
+
+.tabs {
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.tabs ul {
+    border: 1px solid #404048;
+    padding: 10px
+}
+
+.tab h2 {
+    text-align: left;
+}
+
+.tab p {
+    text-align: left;
+}
+
+/*.ui-tabs-vertical {
+    width: 75em;
+}*/
+
+/*.ui-tabs-vertical .ui-tabs-nav {
+    padding: .2em .1em .2em .2em;
+    float: left;
+    width: 12em;
+}*/
+
+.ui-tabs-vertical .ui-tabs-nav li {
+    clear: left;
+    width: 100%;
+    border-bottom-width: 1px !important;
+    border-right-width: 0 !important;
+    margin: 0 -1px .2em 0;
+}
+
+.ui-tabs-vertical .ui-tabs-nav li a {
+    display: block;
+}
+
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+    padding-bottom: 0;
+    padding-right: .1em;
+    border-right-width: 1px;
+}
+
+.ui-tabs-vertical .ui-tabs-panel {
+    padding: 1em;
+    float: right;
+    width: 40em;
+}
+
+
+.tab {
+    max-width: 700px;
+    margin-left: 40px;
+}
+
+
+.box-modal {
+	position: relative;
+	width: 500px;
+	padding: 16px;
+	background: #3c3f41;
+	color: #bbb;
+	font: 14px/18px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
+	border-radius: 6px;
+}
+.box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 11px; line-height: 15px; color: #999; cursor: pointer; }
+.box-modal_close:hover { color: #6897bb; }
